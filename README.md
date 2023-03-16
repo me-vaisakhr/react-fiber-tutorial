@@ -3,7 +3,7 @@
 This repo is for learning few things 
 ### 1. React Fiber
 ### 2. 3D Rendering
-### 2. Vite
+### 3. Vite
 
 ## Demo
 
