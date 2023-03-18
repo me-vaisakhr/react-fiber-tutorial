@@ -15,13 +15,16 @@ const Router = () => {
         <Routes>
           <Route path="/">
             <Route index element={<Navigate to={RoutePaths.BASIC} />} />
-            {routePaths.map(({ path, element }, index) => (
-              <Route
-                key={`router-path-${index}`}
-                path={path}
-                element={element}
-              />
-            ))}
+            <Route path="react-fiber-tutorial">
+              <Route index element={<Navigate to={routePaths[0].path} />} />
+              {routePaths.map(({ path, element }, index) => (
+                <Route
+                  key={`router-path-${index}`}
+                  path={path}
+                  element={element}
+                />
+              ))}
+            </Route>
             <Route path={`*`} element={<div>404</div>} />
           </Route>
         </Routes>

@@ -25,7 +25,7 @@ const Nav: FC<{}> = () => {
           <li
             className={currentNav === nav.path ? "navlink__active" : ""}
             key={`nav-link-${index}`}
-            onClick={() => navigate(nav.path)}
+            onClick={() => navigate(`/react-fiber-tutorial/${nav.path}`)}
           >
             {nav.name}
           </li>
