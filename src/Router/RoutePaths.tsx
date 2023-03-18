@@ -24,3 +24,6 @@ export const routePaths: RoutePath[] = [
     element: <Shapes />,
   },
 ];
+
+
+
