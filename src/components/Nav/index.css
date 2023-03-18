@@ -32,6 +32,22 @@
     scale: 1.2;
     transition: all 0.5s ease-in;
     transform-origin: center;
+    user-select: none;
+}
+
+.nav__controller::before, .nav__controller::after {
+    content: "";
+    position: absolute;
+    background-color: white;
+    border-radius: 10px;
+}
+.nav__controller::before{
+    width: 14px;
+    height: 4px;
+}
+.nav__controller::after{
+    width: 4px;
+    height: 14px;
 }
 
 .nav__controller_open {
@@ -80,7 +96,13 @@
     transition: all 0.4s linear;
 }
 
-.nav_bar li:hover {
+.nav_bar li a{
+    text-decoration: none;
+    color: white;
+}
+
+.nav_bar li:hover, .navlink__active {
     border: 1px solid white;
     background-color: #18122B;
+    color: white;
 }
