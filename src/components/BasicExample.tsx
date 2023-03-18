@@ -2,8 +2,10 @@ import {
   AccumulativeShadows,
   Center,
   Environment,
+  OrbitControls,
   RandomizedLight,
 } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
 import React, { useRef } from "react";
 import { Mesh } from "three";
 import Sphere from "./common/Sphere";
@@ -66,11 +68,14 @@ const Scene = () => (
 
 const BasicExample = () => {
   return (
-    <mesh>
-      <directionalLight position={[0, 5, 10]} />
-      <Scene />
-      <Backgound />
-    </mesh>
+    <Canvas shadows camera={{ position: [0, 3, 6], fov: 50 }}>
+      <mesh>
+        <directionalLight position={[0, 5, 10]} />
+        <Scene />
+        <Backgound />
+      </mesh>
+      <OrbitControls autoRotate />
+    </Canvas>
   );
 };
 
