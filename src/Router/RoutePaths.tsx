@@ -2,8 +2,8 @@ import BasicExample from "../components/BasicExample";
 import Shapes from "../components/Shapes";
 
 export enum RoutePaths {
-  BASIC = "/basic",
-  SHAPES = "/shapes"
+  BASIC = "basic",
+  SHAPES = "shapes"
 }
 
 export interface RoutePath {
