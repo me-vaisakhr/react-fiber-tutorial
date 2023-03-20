@@ -23,7 +23,7 @@ const Nav: FC<{}> = () => {
       <nav className="nav_bar">
         {routePaths.map((nav, index) => (
           <li
-            className={currentNav === nav.path ? "navlink__active" : ""}
+            className={currentNav.includes(nav.path) ? "navlink__active" : ""}
             key={`nav-link-${index}`}
             onClick={() => navigate(`/react-fiber-tutorial/${nav.path}`)}
           >
