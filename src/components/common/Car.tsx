@@ -19,7 +19,7 @@ type GLTFResult = GLTF & {
 };
 
 const Car = (props: any) => {
-  const { nodes, materials } = useGLTF("/bmw/scene.gltf") as GLTFResult;
+  const { nodes, materials } = useGLTF("public/bmw/scene.gltf") as GLTFResult;
   const carRef = useRef<Group>(null);
 
   const frontLeftTire = useRef<Group>(null);
@@ -36,7 +36,6 @@ const Car = (props: any) => {
     }, 1000);
   }, []);
 
-  console.info(backLightBlink);
 
   useFrame((state, delta) => {
     if (!frontLeftTire.current) return;
@@ -50,7 +49,6 @@ const Car = (props: any) => {
     backRightTire.current.rotateOnAxis(new Vector3(1, 0, 0), -Math.PI * delta);
 
     const deltaPercent = delta * 100;
-    console.info({ deltaPercent });
     if (deltaPercent < 10) {
       enableBackLightBlink((blink) => !blink);
     }
@@ -566,4 +564,4 @@ const Car = (props: any) => {
 
 export default Car;
 
-useGLTF.preload("/bmw/scene.gltf");
+useGLTF.preload("public/bmw/scene.gltf");
