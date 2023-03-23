@@ -19,7 +19,7 @@ type GLTFResult = GLTF & {
 };
 
 const Car = (props: any) => {
-  const { nodes, materials } = useGLTF("public/bmw/scene.gltf") as GLTFResult;
+  const { nodes, materials } = useGLTF("src/assets/bmw/scene.gltf") as GLTFResult;
   const carRef = useRef<Group>(null);
 
   const frontLeftTire = useRef<Group>(null);
@@ -564,4 +564,4 @@ const Car = (props: any) => {
 
 export default Car;
 
-useGLTF.preload("public/bmw/scene.gltf");
+useGLTF.preload("src/assets/bmw/scene.gltf");
