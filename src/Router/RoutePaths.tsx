@@ -1,9 +1,11 @@
 import BasicExample from "../components/BasicExample";
+import GltfLoader from "../components/GltfLoader";
 import Shapes from "../components/Shapes";
 
 export enum RoutePaths {
   BASIC = "basic",
-  SHAPES = "shapes"
+  SHAPES = "shapes",
+  GLTF = "gltf"
 }
 
 export interface RoutePath {
@@ -22,6 +24,11 @@ export const routePaths: RoutePath[] = [
     path: RoutePaths.SHAPES,
     name: "Shapes",
     element: <Shapes />,
+  },
+  {
+    path: RoutePaths.GLTF,
+    name: "GLTF Loader",
+    element: <GltfLoader />,
   },
 ];
 
